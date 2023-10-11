@@ -8,3 +8,18 @@ window.addEventListener('scroll', function () {
     header.classList.remove('sticky')
   }
 })
+
+const hamburger = document.getElementById('hamburger')
+const mobileNav = document.getElementById('mobile-nav')
+
+hamburger.addEventListener('click', () => {
+  mobileNav.classList.toggle('active')
+  hamburger.classList.toggle('active') // Add this line
+})
+
+const closeNav = document.getElementById('close-nav')
+
+closeNav.addEventListener('click', () => {
+  mobileNav.classList.remove('active')
+  hamburger.classList.remove('active')
+})
